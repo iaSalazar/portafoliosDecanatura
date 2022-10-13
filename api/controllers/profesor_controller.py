@@ -34,11 +34,11 @@ class RecursoUnProfesor(Resource):
         db.session.commit()
         return profesor_schema.dump(profesor)
 
-    def delete(self, id_publicacion):
-        profesor = Profesor.query.get_or_404(id_publicacion)
+    def delete(self, id_profesor):
+        profesor = Profesor.query.get_or_404(id_profesor)
         db.session.delete(profesor)
         db.session.commit()
         return '', 204
 
 api.add_resource(RecursoListarProfesores, '/api/profesores')     
-api.add_resource(RecursoUnProfesor, '/api/profesores/<int:id_publicacion>')
+api.add_resource(RecursoUnProfesor, '/api/profesores/<int:id_profesor>')

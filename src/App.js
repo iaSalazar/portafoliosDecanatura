@@ -7,8 +7,8 @@ function App() {
   const [currentTime, setCurrentTime] = useState(0);
 
   useEffect(() => {
-    fetch('/time').then(res => res.json()).then(data => {
-      setCurrentTime(data.time);
+    fetch('/api/profesores/1234').then(res => res.json()).then(data => {
+      setCurrentTime(data.nombre);
     });
   }, []);
 
@@ -18,7 +18,7 @@ function App() {
         <img src={logo} className="App-logo" alt="logo" />
         ... no changes in this part ...
 
-        <p>The current time is {currentTime}.</p>
+        <p>The current professor is {currentTime}.</p>
       </header>
     </div>
   );
