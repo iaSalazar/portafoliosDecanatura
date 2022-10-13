@@ -40,5 +40,5 @@ class RecursoUnProfesor(Resource):
         db.session.commit()
         return '', 204
 
-api.add_resource(RecursoListarProfesores, '/profesores')     
-api.add_resource(RecursoUnProfesor, '/profesores/<int:id_publicacion>')
+api.add_resource(RecursoListarProfesores, '/api/profesores')     
+api.add_resource(RecursoUnProfesor, '/api/profesores/<int:id_publicacion>')
