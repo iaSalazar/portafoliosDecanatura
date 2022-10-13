@@ -46,4 +46,4 @@ class RecursoUnArticulo(Resource):
         return '', 204
 
 api.add_resource(RecursoListarArticulos, '/api/articulos')     
-api.add_resource(RecursoUnArticulo, '/api/articulos/<int:id_publicacion>')
+api.add_resource(RecursoUnArticulo, '/api/articulos/<int:id_articulo>')
